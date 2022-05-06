@@ -31,7 +31,7 @@ export function drawRect(point: Point, size: Size): ElementRect {
  * @param angle 旋转角度
  * @returns 旋转后的点
  */
-export function getPointRotateByOrigin(point: Point, origin: Point, angle: number) {
+export function getPointRotateByOrigin(point: Point, origin: Point, angle: number): Point {
   const mirrorOriginY = -origin.y;
   const mirrorPointY = -point.y;
   const rx = point.x - origin.x;
@@ -49,13 +49,15 @@ export function getPointRotateByOrigin(point: Point, origin: Point, angle: numbe
 }
 
 // 获取angle的PI值
-export function getAnglePI(angle: number) {
+export function getAnglePI(angle: number): number {
   return (angle / 180) * Math.PI;
 }
 
 
 // 获取 正方形从水平旋转 angle 度之后的四点位置
-export function getRotateRect(rect: Size & Position, angle: number) {
+export function getRotateRectPoints(rect: Size & Position, angle: number): {
+  [key in Direction]: Point;
+} {
   // 其实可以看成，一个圆的四个点在旋转
   const { width, height, left, top } = rect;
 
@@ -107,29 +109,16 @@ export function getRotateRect(rect: Size & Position, angle: number) {
     y: originPoint.y,
   }, originPoint, angle);
 
-  const minX = Math.min(topLeftPoint.x, topRightPoint.x, bottomRightPoint.x, bottomLeftPoint.x);
-  const maxX = Math.max(topLeftPoint.x, topRightPoint.x, bottomRightPoint.x, bottomLeftPoint.x);
-  const minY = Math.min(topLeftPoint.y, topRightPoint.y, bottomRightPoint.y, bottomLeftPoint.y);
-  const maxY = Math.max(topLeftPoint.y, topRightPoint.y, bottomRightPoint.y, bottomLeftPoint.y);
-
   return {
-    point: {
-      topLeft: topLeftPoint,
-      top: topPoint,
-      topRight: topRightPoint,
-      right: rightPoint,
-      bottomRight: bottomRightPoint,
-      bottom: bottomPoint,
-      bottomLeft: bottomLeftPoint,
-      left: leftPoint,
-    },
-    width: maxX - minX,
-    height: maxY - minY,
-    left: minX,
-    right: maxX,
-    top: minY,
-    bottom: maxY,
-  };
+    topLeft: topLeftPoint,
+    top: topPoint,
+    topRight: topRightPoint,
+    right: rightPoint,
+    bottomRight: bottomRightPoint,
+    bottom: bottomPoint,
+    bottomLeft: bottomLeftPoint,
+    left: leftPoint,
+  }
 }
 
 
