@@ -1,5 +1,6 @@
 {
   "exclude": ["node_modules"],
+  "include": [".eslintrc.js", "webpack.config.js", "src"],
   "compilerOptions": {
     "baseUrl": "./",
     "target": "es2021",

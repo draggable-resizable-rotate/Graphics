@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const WebpackBar = require('webpackbar');
 // 获取当前项目的根路径
 const appDirectory = fs.realpathSync(process.cwd());
@@ -46,12 +45,10 @@ const optimization = {
       },
       extractComments: false,
     }),
-    // 默认使用 cssnano 压缩，默认会移除所有的注释
-    new CssMinimizerPlugin(),
   ],
 }
 
-const module = {
+const webpackModule = {
   strictExportPresence: true,
   rules: [
     // 能够提取匹配到的第三方模块的source-map，无论是文件或者链接或者内联模式都可
@@ -96,6 +93,10 @@ module.exports = {
   output,
   optimization,
   mode: 'production',
-  module,
+  module: webpackModule,
   plugins,
+  resolve: {
+    modules: ['node_modules'],
+    extensions: ['.ts', '.js', '.json', '.wasm']
+  }
 }
