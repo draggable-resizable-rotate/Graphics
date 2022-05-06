@@ -1,17 +1,7 @@
-
 declare namespace Graphics {
   type CanWritable<T> = {
     -readonly [k in keyof T]: T[k]
   };
-
-  interface MatrixType {
-    translateX: number,
-    translateY: number,
-    rotate: number,
-    skew: number,
-    scaleX: number,
-    scaleY: number
-  }
 
   enum PointOnLineEquation {
     On = 'on',
@@ -32,6 +22,16 @@ declare namespace Graphics {
   interface Size {
     width: number;
     height: number
+  }
+
+
+  interface MatrixType {
+    translateX: number,
+    translateY: number,
+    rotate: number,
+    skew: number,
+    scaleX: number,
+    scaleY: number
   }
 
   type ElementRect = CanWritable<Omit<DOMRect, 'toJSON'>>;
@@ -100,8 +100,8 @@ declare namespace Graphics {
     getValidDirectionIndex: (index: number) => number;
   }
 
-  const Matrix = {
-    parseMatrix: (transform: string) => (MatrixType | null),
+  const Matrix: {
+    parseMatrix: (transform: string) => MatrixType | null;
   }
 }
 
