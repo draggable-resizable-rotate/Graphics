@@ -3,6 +3,8 @@
   "version": "1.0.7",
   "description": "",
   "main": "./dist/index",
+  "typings": "./src/type.d.ts",
+  "types": "./src/type.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public",

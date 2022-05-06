@@ -8,3 +8,5 @@ export const a = 'aaa'
 export {
   getElementDocumentRect
 }
+
+console.log('我是无敌的')
