@@ -14,7 +14,7 @@ export interface Matrix {
   * @return {Object}
   */
 
-export default function parseMatrix(transform: string): Matrix | null {
+export function parseMatrix(transform: string): Matrix | null {
   return parse(transform);
 }
 
