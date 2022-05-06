@@ -14,9 +14,12 @@ const entry = {
 }
 
 const output = {
+  clean: true,
   path: resolveApp('dist'),
   filename: '[name].js',
-  assetModuleFilename: '[name].[ext]'
+  assetModuleFilename: '[name].[ext]',
+  library: 'GraphicsUtils',
+  libraryTarget: 'umd',
 }
 
 const optimization = {
