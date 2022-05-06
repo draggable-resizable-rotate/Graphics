@@ -1,4 +1,4 @@
-declare namespace Graphics {
+export declare namespace Graphics {
   type CanWritable<T> = {
     -readonly [k in keyof T]: T[k]
   };
