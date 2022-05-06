@@ -1,6 +1,6 @@
 {
   "name": "@shepijcanwu/graphics",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "graphics utils, such as: line、rect、matrix、positionCalculate",
   "main": "./dist/index",
   "typings": "./src/type.d.ts",
