@@ -1,11 +1,6 @@
-export interface Matrix {
-  translateX: number,
-  translateY: number,
-  rotate: number,
-  skew: number,
-  scaleX: number,
-  scaleY: number
-}
+import Graphics from "./type";
+
+type Matrix = Graphics.Matrix
 
 /**
   * Unmatrix

@@ -2,12 +2,7 @@ import Graphics from "./type";
 
 type Point = Graphics.Point;
 type LineEquation = Graphics.LineEquation;
-
-export enum PointOnLineEquation {
-  On = 'on',
-  Down = 'down',
-  Up = 'up',
-}
+const PointOnLineEquation = Graphics.PointOnLineEquation;
 
 /**
  *

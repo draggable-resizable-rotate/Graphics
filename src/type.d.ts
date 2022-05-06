@@ -1,16 +1,24 @@
 
-import { getRelativePoint } from './positionCalculate'
-
 declare namespace Graphics {
   type CanWritable<T> = {
     -readonly [k in keyof T]: T[k]
   };
+
+  interface Matrix {
+    translateX: number,
+    translateY: number,
+    rotate: number,
+    skew: number,
+    scaleX: number,
+    scaleY: number
+  }
 
   enum PointOnLineEquation {
     On = 'on',
     Down = 'down',
     Up = 'up',
   }
+
   interface Position {
     left: number;
     top: number;
@@ -50,14 +58,14 @@ declare namespace Graphics {
 
   type DirectionType = 'apex-angle' | 'line';
 
-  type getElementDocumentRect = (element: HTMLElement, position: Position) => ElementRect
+  function getElementDocumentRect(element: HTMLElement, position: Position): ElementRect
 
-  type getRelativePoint = (
+  function getRelativePoint(
     relativePoint: Point,
     freePoint: Point,
-  ) => Point
+  ): Point
 
-  type Line = {
+  const Line: {
     getLineEquation: (pointOne: Point, pointTwo: Point) => LineEquation;
     getPointToLineDistance: (point: Point, lineEquation: LineEquation) => number;
     get2LineIntersectionPoint: (
@@ -75,7 +83,7 @@ declare namespace Graphics {
     ) => LineEquation;
   }
 
-  type Rect = {
+  const Rect: {
     drawRect: (point: Point, size: Size) => ElementRect;
     getPointRotateByOrigin: (point: Point, origin: Point, angle: number) => Point;
     getAnglePI: (angle: number) => number;
@@ -91,7 +99,12 @@ declare namespace Graphics {
     };
     getValidDirectionIndex: (index: number) => number;
   }
+
+  const Matrix = {
+    parseMatrix: (transform: string) => (Matrix | null),
+  }
 }
 
-
 export = Graphics
+export as namespace React;
+export default Graphics
