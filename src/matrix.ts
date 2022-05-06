@@ -1,6 +1,6 @@
 import Graphics from "./type";
 
-type Matrix = Graphics.Matrix
+type Matrix = Graphics.MatrixType
 
 /**
   * Unmatrix

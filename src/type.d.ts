@@ -4,7 +4,7 @@ declare namespace Graphics {
     -readonly [k in keyof T]: T[k]
   };
 
-  interface Matrix {
+  interface MatrixType {
     translateX: number,
     translateY: number,
     rotate: number,
@@ -101,7 +101,7 @@ declare namespace Graphics {
   }
 
   const Matrix = {
-    parseMatrix: (transform: string) => (Matrix | null),
+    parseMatrix: (transform: string) => (MatrixType | null),
   }
 }
 
