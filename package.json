@@ -1,7 +1,7 @@
 {
   "name": "@shepijcanwu/graphics",
-  "version": "1.1.5",
-  "description": "",
+  "version": "1.1.4",
+  "description": "graphics utils, such as: line、rect、matrix、positionCalculate",
   "main": "./dist/index",
   "typings": "./src/type.d.ts",
   "types": "./src/type.d.ts",
@@ -9,6 +9,14 @@
     "dist",
     "src"
   ],
+  "keywords": [
+    "graphics",
+    "line",
+    "line",
+    "rotate",
+    "matrix"
+  ],
+  "author": "shepijcanwu",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public",
@@ -18,8 +26,6 @@
     "type": "git",
     "url": "git+https://github.com/shepijcanwu/Graphics.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shepijcanwu/Graphics/issues"
