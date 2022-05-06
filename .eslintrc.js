@@ -49,7 +49,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'error',
     'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],
     'jsx-quotes': ['error', 'prefer-double'],
-    '@typescript-eslint/no-var-requires': 'off'
+    '@typescript-eslint/no-var-requires': 'off',
+    'semi': ['never']
   },
 }
 

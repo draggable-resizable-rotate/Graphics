@@ -1,3 +1,5 @@
+import Graphics from "./type";
+
 type Point = Graphics.Point;
 type LineEquation = Graphics.LineEquation;
 

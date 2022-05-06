@@ -1,4 +1,4 @@
-export declare namespace Graphics {
+declare namespace Graphics {
   type CanWritable<T> = {
     -readonly [k in keyof T]: T[k]
   };
@@ -41,3 +41,6 @@ export declare namespace Graphics {
 
   type DirectionType = 'apex-angle' | 'line';
 }
+
+
+export = Graphics

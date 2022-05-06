@@ -1,3 +1,5 @@
+import Graphics from "./type";
+
 type Position = Graphics.Position;
 type ElementRect = Graphics.ElementRect;
 type Point = Graphics.Point;
