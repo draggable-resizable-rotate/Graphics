@@ -50,7 +50,6 @@ module.exports = {
     'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],
     'jsx-quotes': ['error', 'prefer-double'],
     '@typescript-eslint/no-var-requires': 'off',
-    'semi': ['never']
+    'semi': ['warn', 'always']
   },
-}
-
+};

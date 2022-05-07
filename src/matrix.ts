@@ -1,6 +1,4 @@
-import Graphics from "./type";
-
-type Matrix = Graphics.MatrixType
+type Matrix = Global.MatrixType
 
 /**
   * Unmatrix

@@ -1,8 +1,6 @@
-import Graphics from "./type";
-
-type Point = Graphics.Point;
-type LineEquation = Graphics.LineEquation;
-const PointOnLineEquation = Graphics.PointOnLineEquation;
+type Point = Global.Point;
+type LineEquation = Global.LineEquation;
+const PointOnLineEquation = Global.PointOnLineEquation;
 
 /**
  *

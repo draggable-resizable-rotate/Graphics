@@ -11,7 +11,7 @@ const entry = {
   index: {
     import: resolveApp('src/index')
   }
-}
+};
 
 const output = {
   clean: true,
@@ -20,7 +20,7 @@ const output = {
   assetModuleFilename: '[name].[ext]',
   library: 'GraphicsUtils',
   libraryTarget: 'umd',
-}
+};
 
 const optimization = {
   minimize: true,
@@ -49,7 +49,7 @@ const optimization = {
       extractComments: false,
     }),
   ],
-}
+};
 
 const webpackModule = {
   strictExportPresence: true,
@@ -84,7 +84,7 @@ const webpackModule = {
       ],
     },
   ],
-}
+};
 
 const plugins = [
   // 进度条，替代方案 progress-bar-webpack-plugin
@@ -102,4 +102,4 @@ module.exports = {
     modules: ['node_modules'],
     extensions: ['.ts', '.js', '.json', '.wasm']
   }
-}
+};

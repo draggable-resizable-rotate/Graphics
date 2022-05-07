@@ -1,10 +1,8 @@
-import Graphics from "./type";
-
-type ElementRect = Graphics.ElementRect;
-type Point = Graphics.Point;
-type Size = Graphics.Size;
-type Position = Graphics.Position;
-type Direction = Graphics.Direction;
+type ElementRect = Global.ElementRect;
+type Point = Global.Point;
+type Size = Global.Size;
+type Position = Global.Position;
+type Direction = Global.Direction;
 /**
  *
  * @param point 矩形的中心点 originPoint
@@ -118,7 +116,7 @@ export function getRotateRectPoints(rect: Size & Position, angle: number): {
     bottom: bottomPoint,
     bottomLeft: bottomLeftPoint,
     left: leftPoint,
-  }
+  };
 }
 
 

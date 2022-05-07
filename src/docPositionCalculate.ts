@@ -1,8 +1,6 @@
-import Graphics from "./type";
-
-type Position = Graphics.Position;
-type ElementRect = Graphics.ElementRect;
-type Point = Graphics.Point;
+type Position = Global.Position;
+type ElementRect = Global.ElementRect;
+type Point = Global.Point;
 /**
  * @description 获取元素的文档流节点位置
  * @param element 元素

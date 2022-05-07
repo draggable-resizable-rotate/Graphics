@@ -1,6 +1,4 @@
-import Graphics from "./type";
-
-type Point = Graphics.Point;
+type Point = Global.Point;
 
 // 两个点在同一个直角坐标系内，一个点相对另外一个点的位置
 export function getRelativePoint(
