@@ -1,7 +1,4 @@
-type Point = Global.Point;
-type LineEquation = Global.LineEquation;
-const PointOnLineEquation = Global.PointOnLineEquation;
-
+import { PointOnLineEquation, LineEquation, Point } from './Graphics';
 /**
  *
  * @param pointOne Point 第一个点坐标

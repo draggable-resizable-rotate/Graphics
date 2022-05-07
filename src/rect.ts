@@ -1,8 +1,4 @@
-type ElementRect = Global.ElementRect;
-type Point = Global.Point;
-type Size = Global.Size;
-type Position = Global.Position;
-type Direction = Global.Direction;
+import { Position, ElementRect, Point, Size, Direction } from './Graphics';
 /**
  *
  * @param point 矩形的中心点 originPoint

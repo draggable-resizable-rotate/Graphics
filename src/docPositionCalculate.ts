@@ -1,6 +1,4 @@
-type Position = Global.Position;
-type ElementRect = Global.ElementRect;
-type Point = Global.Point;
+import { Position, ElementRect, Point } from './Graphics';
 /**
  * @description 获取元素的文档流节点位置
  * @param element 元素

@@ -1,5 +1,4 @@
-type Matrix = Global.MatrixType
-
+import { MatrixType } from './Graphics';
 /**
   * Unmatrix
   *
@@ -7,7 +6,7 @@ type Matrix = Global.MatrixType
   * @return {Object}
   */
 
-export function parseMatrix(transform: string): Matrix | null {
+export function parseMatrix(transform: string): MatrixType | null {
   return parse(transform);
 }
 
