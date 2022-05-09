@@ -1,6 +1,6 @@
 {
   "name": "@draggable-resizable-rotate/graphics",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "graphics utils, such as: line、rect、matrix、positionCalculate",
   "main": "./dist/index",
   "typings": "./src/type.d.ts",
